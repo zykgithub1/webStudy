@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var obj={
+            uname:"张三丰",
+            age:18,
+            sex:'man',
+            sayHi:function(){
+                console.log("HI");
+            }
+        }
+        var obj1=new Object();
+        obj1.name="张三丰";
+        obj1.age=21;
+
+        console.log(obj.uname==obj["uname"]&&obj.uname==obj1.name);
+        console.log(obj1.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

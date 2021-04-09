@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var computer={
+            color:"RED",weight:100,brand:"lenovo",
+            watchMove:function (moveName) {
+                console.log("正在观看"+moveName);
+            },
+            listenMusic:function (sang) {
+                console.log("听"+sang);
+            },
+            code:function (codeType) {
+                console.log("正在coding"+codeType);
+            }
+        }
+        // for(var k in computer){
+        //     console.log(computer[k]);
+        // }
+        function reverseAllArr(arrName) {
+            return arrName.reverse();
+        }
+        function sortArr(arrName1) {
+            for(var i=0;i<arrName1.length-1;i++){
+                for(var j=0;j<arrName1.length-i-1;j++){
+                    if(arrName1[j]>arrName1[j+1]){
+                        var tmp=arrName1[j];
+                        console.log(tmp,arrName1[j],arrName1[j+1]);
+                        arrName1[j]=arrName1[j+1];
+                        arrName1[j+1]=tmp;
+                    }
+                }
+            }
+            //console.log(arrName1);
+            return arrName1;
+        }
+        var arr=[6,5,4,3,2,1];
+        arr=reverseAllArr(arr);
+        console.log(arr);
+        var arr2=[5,3,8,1,9,11,4];
+        //arr2.sort()
+        var arr3=sortArr(arr2);
+        console.log(arr3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

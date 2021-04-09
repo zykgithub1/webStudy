@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str="abaasdffggghhjjkkgfddsssssssssssssssssssbbbbbbbbbbbbbbbbbbb3444343";
+        var obj={};
+        console.log(str.length);
+        console.log(str.charAt(29));
+        for(var i=0;i<str.length;i++){
+            var chaos=str.charAt(i);
+            if(obj[chaos]){
+                obj[chaos]++;
+            }else{
+                obj[chaos]=1;
+            }
+        }
+        console.log(obj instanceof Array);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

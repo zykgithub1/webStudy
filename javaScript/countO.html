@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str="abcoefoxyozzopp";
+        function countO(str,o) {
+            var ans=[];
+            var count=0;
+            for(var i=0;i<str.length;i++){
+                if(str.charAt(i)==='o'){
+                    ans.push(i);
+                    count++;
+                }
+            }
+            ans.push("出现的总次数为"+count);
+            return ans;
+        }
+        console.log(countO(str,'o'));
+    </script>
+</head>
+<body>
+</body>
+</html>

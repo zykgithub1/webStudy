@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var data=new Date();
+        var nowTime=+new Date('2021.4.10');
+        console.log(data.valueOf());
+        console.log(nowTime);
+        function countDown(time) {
+            var data=new Date();
+            var nowTime=data.valueOf();
+            var inputTime=new Date(time);
+            var times=(inputTime-nowTime)/1000;
+            var d=parseInt(times/60/60/24);
+            d=d<10?'0'+d:d;
+            var h=parseInt(times/60/60%24);
+            h=h<10?'0'+h:h;
+            var m=parseInt(times/60%60);
+            m=m<10?'0'+m:m;
+            var s=parseInt(times%60);
+            s=s<10?'0'+s:s;
+            return d+"天"+h+"时"+m+"分"+s+"秒";
+        }
+        function countDown2(time) {
+            var inputTime=+new Date(time);
+            var curTime=+new Date();
+            var times=(inputTime-curTime)/1000;
+            var d=parseInt(times/60/60/24);
+            d=d<10?'0'+d:d;
+            var h=parseInt(times/60/60%24);
+            h=h<10?'0'+h:h;
+            var m=parseInt(times/60%60);
+            m=m<10?'0'+m:m;
+            var s=parseInt(times%60);
+            s=s<10?'0'+s:s;
+            return d+"天"+h+"时"+m+"分"+s+"秒";
+        }
+        console.log(countDown('2022-12-21 '));
+        console.log(countDown2('2022-12-21 '));
+        var data1=[];
+        data1.push(1,2,3,4,5,6);
+        data1.unshift('zzzyykk');
+        data1.pop();
+        data1.shift();
+        console.log(data1);
+        console.log(data instanceof Array);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

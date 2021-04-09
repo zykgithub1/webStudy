@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var str="abcoefoxyozzooooopp";
+        var str1="zykzykzyk";
+        var combine=str.concat(str1);
+
+
+        console.log(combine.replace("a","!"));
+        console.log(combine);
+
+        console.log(combine.substr(6,6));
+        console.log(str.charAt(0));
+        var obj=new Object();
+        for(var i=0;i<str.length;i++){
+            var chars=str.charAt(i);
+            if(obj[chars]){
+                obj[chars]++;
+            }else{
+                obj[chars]=1;
+            }
+        }
+       console.log(obj);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
