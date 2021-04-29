@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            white-space: nowrap;
+        /*complosory one line display*/
+        /*    要两个结合起来才是省略号*/
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*多行显示非第一行显示省略号的固定代码*/
+            display: -webkit-box;
+           /*-webkit-box-lines: 1;*/
+            -webkit-box-orient: vertical;
+
+
+        }
+    </style>
+</head>
+<body>
+<div>啥也不说 ，这里面全是字
+</div>
+</body>
+</html>

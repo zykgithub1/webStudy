@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            position: absolute;
+            /*margin-top: 50px auto;*/
+            margin: 50px auto;
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-right: 50px solid red;
+            border-bottom: 0px solid blue;
+            border-left: 0px solid green;
+        }
+        .next{
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color:transparent red transparent transparent ;
+            border-width: 100px 50px 0 0 ;
+        }
+        .price{
+            width: 160px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+        .miaosha{
+            z-index:2;
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        .miaosha .bianku{
+            position: absolute;
+            right:0px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-color: transparent white transparent transparent;
+            border-width: 24px 11px 0 0;
+        }
+        .oldPirice{
+            font-size: 12px;
+            color:#888888;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="price">
+    <span class="miaosha">$1650
+    <div class="bianku"></div>
+    </span>
+    <span class="oldPirice">$5555</span>
+</div>
+</body>
+</html>
