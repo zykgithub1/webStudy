@@ -1,0 +1,48 @@
+.main{
+    margin-top: 10px;
+    margin-left: 220px;
+    width: 980px;
+    height: 455px;
+    border: 1px solid;
+    /*background-color: pink;*/
+}
+.main .focus{
+    float: left;
+    width: 720px;
+    height: 455px;
+}
+.main .newsflash{
+    float: right;
+    width: 250px;
+    height:455px ;
+    /*background-color: skyblue;*/
+}
+.news{
+    height: 165px;
+    /*background-color: pink;*/
+}
+.lifeservice{
+    height: 209px;
+    background-color: purple;
+}
+.bargain{
+    margin-top: 2px;
+}
+.news .news_hd{
+    padding: 0 15px;
+    height: 33px;
+    line-height: 33px;
+    border-bottom:dotted 1px #e4e4e4 ;
+}
+.news_hd h5{
+    font-size: 14px;
+    float: left;
+}
+.more{
+    float: right;
+}
+.more::after{
+    margin-left: 4px;
+    font-family: icomoon;
+    content: "\e901";
+}
