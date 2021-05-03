@@ -18,13 +18,11 @@
     /*background-color: skyblue;*/
 }
 .news{
+    border: 1px solid #e4e4e4;
     height: 165px;
     /*background-color: pink;*/
 }
-.lifeservice{
-    height: 209px;
-    background-color: purple;
-}
+
 .bargain{
     margin-top: 2px;
 }
@@ -45,4 +43,190 @@
     margin-left: 4px;
     font-family: icomoon;
     content: "\e901";
+}
+.news_bd ul li{
+    margin-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.news_bd ul li:first-child{
+    margin-top: 3px;
+}
+.lifeservice{
+    overflow: hidden;
+    height: 209px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    /*border-left: none;*/
+}
+.lifeservice ul{
+    width: 252px;
+}
+.lifeservice ul li{
+    text-align: center;
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    float: left;
+    /*background: url("../images/life_03.jpg")no-repeat;*/
+    width: 63px;
+    height: 71px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    border-left: 0;
+}
+.lifeservice ul li i{
+    margin-top: 15px;
+    background: url("../images/icons.png")no-repeat -19px -15px;
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+}
+.lifeservice ul li:nth-child(2){
+    background: url("../images/cut_03.png")no-repeat right top;
+}
+.lifeservice ul li p{
+    line-height: 11px;
+}
+/*---------------------------------首页推荐模块----------------------*/
+.recom{
+    height: 163px;
+    margin-top: 12px;
+    background-color: #ebebeb;
+}
+.recom_hd{
+    float: left;
+    width: 206px;
+    height: 163px;
+    background:url("../images/todayrecom_07.png")no-repeat;
+}
+.recom_bd{
+    float: left;
+}
+.recom_bd li{
+    position: relative;
+    width: 248px;
+    height: 163px;
+    float: left;
+    background: url("../upload/watch_09.jpg")no-repeat;
+}
+.recom_bd li:nth-child(-n+3)::after{
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    content: "";
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+/*-------------------------------         猜你喜欢模块        ---------------------*/
+.guess{
+    overflow: hidden;
+    margin-top: 20px;
+    height: 270px;
+    /*background-color: pink;*/
+}
+.guess_top{
+    line-height: 36px;
+    height:36px;
+    border-bottom: 1px solid #eee;
+}
+.guess_top h4{
+    margin-left: 20px;
+    float: left;
+    font-size: 16px;
+}
+.guess_top .change{
+    float: right;
+}
+.guess_body{
+    height: 232px;
+}
+.guess_body ul{
+    /*overflow: scroll;*/
+    width: 100%;
+    height: 100%;
+}
+.guess_body ul li{
+    padding: 20px 30px;
+    width: 200px;
+    height: 234px;
+    float: left;
+}
+.guess_body ul li img{
+    width: 142px;
+    height: 142px;
+}
+.guess_body ul li h3{
+    color: red;
+    font-size: 13px;
+    font-family: 宋体;
+}
+.guess_body ul li div{
+    border-right: 1px solid #e4e4e4;
+}
+/*------------------------------------楼层模块 ----------------------------*/
+
+/*----------------  家电----------------*/
+.floor .w{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    /*background-color: pink;*/
+}
+.jiandian_hd{
+    line-height: 30px;
+    height: 30px;
+    border-bottom:2px solid red ;
+}
+.jiandian_hd h3{
+    color: red;
+    font-size: 18px;
+    float: left;
+    font-weight: 400;
+}
+.jiandian_hd ul{
+    line-height: 30px;
+    float: right;
+}
+.jiandian_hd ul li{
+    float: left;
+}
+.jiandian_hd ul li:nth-child(2n){
+    margin: 8px 15px;
+    height: 13px;
+    border: 1px solid;
+}
+.jiandian_bd{
+    height: 361px;
+    /*background-color: purple;*/
+}
+.table_list_item>div{
+    float: left;
+}
+.col_210{
+    width: 210px;
+    height: 361px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.col_210 ul li{
+    text-align: center;
+    float: left;
+    margin-left: 15px;
+    line-height: 34px;
+    height: 34px;
+    width: 85px;
+    border-bottom: 1px  solid #ccc;
+}
+.col_329{
+    width: 329px;
+}
+.col_221{
+    border-right: 1px solid #ccc;
+    width: 221px;
+}
+.col_219{
+    width: 219px;
 }
