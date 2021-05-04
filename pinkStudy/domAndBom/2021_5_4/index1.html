@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        div img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<button id="ldh">刘德华</button>
+<button id="zxy">张学友</button>
+<div>
+    <img src="images/ldh.jpg" alt="">
+</div>
+<script>
+    // var div=document.querySelector("div");
+    // // div.innerText="today i am so happy i start studying bom and dom"
+    // div.innerHTML="<strong>  today i am so happy </strong> i start studying bom and dom";
+    var img=document.querySelector("img");
+    var ldh=document.getElementById("ldh");
+    var zxy=document.getElementById("zxy");
+    var div=document.querySelector("div")
+    zxy.onclick=function () {
+        img.src="images/zxy.jpg";
+    }
+    ldh.onclick=function () {
+        img.src="images/ldh.jpg";
+    }
+</script>
+
+
+</body>
+</html>

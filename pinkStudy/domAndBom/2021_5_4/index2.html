@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #outer{
+            border: 1px solid;
+            width: 300px;
+            height: 300px;
+            margin: 40px auto;
+        }
+        #outer div{
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="outer">
+
+    <img src="images/s.gif" alt="">
+    <div id="wenhou">上午好</div>
+    <script>
+        var img=document.querySelector("img");
+        var div=document.getElementById("wenhou");
+        var data=new Date();
+        var  h=data.getHours();
+        var h=19;
+        if(h<12) {
+            alert("morning");
+            img.src = "images/s.gif";
+            div.innerHTML = "上午好啊";
+        }else{
+            img.src="images/w.gif";
+            div.innerHTML="晚上好";
+
+        }
+    </script>
+</div>
+
+</body>
+</html>

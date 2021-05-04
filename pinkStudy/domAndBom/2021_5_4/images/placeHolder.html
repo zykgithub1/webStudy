@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            display: block;
+            margin: 100px auto;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="phone">
+<script>
+    var input=document.querySelector("input");
+    input.onfocus=function () {
+        if(this.value=="phone"){
+            this.value="";
+        }
+    }
+    input.onblur=function () {
+        if(this.value==""){
+            this.value="phone";
+        }
+    }
+</script>
+
+</body>
+</html>

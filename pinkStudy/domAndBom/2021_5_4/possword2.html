@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .register{
+            /*border: 1px solid;*/
+            width: 500px;
+            /*height: 30px;*/
+            margin: 40px auto;
+        }
+        .ipt{
+            vertical-align: middle;
+            width: 200px;
+            height:30px;
+            outline: none;
+            margin-right: 20px;
+        }
+        .message{
+            /*border: 1px solid;*/
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            background: url("images/mess.png")no-repeat left center;
+            padding-left: 20px;
+        }
+        .wrong{
+
+            color: red;
+            background: url("images/wrong.png")no-repeat left center;
+        }
+        .right{
+            color: green;
+            background: url("images/right.png")no-repeat left center;
+        }
+    </style>
+</head>
+<body>
+<div class="register">
+    <input type="password" class="ipt">
+    <p class="message">请输入6~10位密码</p>
+    <script>
+        var ipt=document.querySelector(".ipt");
+        var message=document.querySelector(".message");
+        ipt.onblur=function () {
+            if(ipt.value.length<6||this.value.length>10){
+                message.className="wrong message";
+                message.innerText="你输入的位数错误要求6-17";
+            }else if(ipt.value.length==0){
+                message.className="message";
+            }
+            else{
+                message.className="right message";
+                message.innerHTML="密码可以使用";
+            }
+        }
+        ipt.onfocus=function () {
+            if(ipt.value.length==0){
+                message.className="message";
+                message.innerText="请输入6~10位密码";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
