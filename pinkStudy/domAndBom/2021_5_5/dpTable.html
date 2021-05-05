@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            text-align: center;
+            width: 500px;
+            margin: 100px auto;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td,th{
+            border: 1px solid #333;
+        }
+        table thead tr{
+            height: 40px;
+            background-color: #e4e4e4;
+        }
+        tbody tr{
+            border: 1px solid;
+            width: 500px;
+            height: 30px;
+            background-color:skyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <table cellspacing="0" border="1" >
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>科目</th>
+            <th>成绩</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button>添加</button>
+</div>
+<script>
+    //准备对象
+    var datas=[];
+    function data(name,sub,score){
+        this.name=name;
+        this.sub=sub;
+        this.score=score;
+    }
+    var sb1=new data("曾驿凯","javascript",100);
+    var sb2=new data("曾二凯","java",100);
+    var sb3=new data("曾三凯","python",100);
+    datas.push(sb1);
+    datas.push(sb2);
+    datas.push(sb3);
+    // console.log(datas[0]);
+    // console.log(datas[1]);
+    var tbody=document.querySelector("table").querySelector("tbody");
+    for(var i=0;i<datas.length;i++){
+        var tr=document.createElement("tr");
+        tbody.appendChild(tr);
+        for(var k in datas[i]){
+            console.log(k);
+            var td=document.createElement("td");
+            td.innerHTML=datas[i][k];
+            tr.appendChild(td);
+        }
+        var td=document.createElement("td");
+        td.innerHTML="<button>删除</button>";
+        tr.appendChild(td);
+    }
+    var dels=document.querySelectorAll("button");
+    for(var i=0;i<datas.length;i++){
+        dels[i].onclick=function () {
+            tbody.removeChild(this.parentNode.parentNode);
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

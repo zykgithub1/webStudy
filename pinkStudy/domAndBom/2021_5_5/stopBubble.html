@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>雄关漫道真如铁，而今迈步从头越</li>
+    <li>雄关漫道真如铁，而今迈步从头越</li>
+    <li>雄关漫道真如铁，而今迈步从头越</li>
+    <li>雄关漫道真如铁，而今迈步从头越</li>
+    <li>雄关漫道真如铁，而今迈步从头越</li>
+</ul>
+<script>
+    var ul=document.querySelector("ul");
+    ul.addEventListener("click",function (e) {
+        ul.stopPropagation();
+        for(var i=0;i<ul.children.length;i++){
+            ul.children[i].style.backgroundColor="white";
+        }
+
+        e.target.style.backgroundColor="pink";
+    })
+    ul.addEventListener("contextmenu",function (e) {
+        e.preventDefault();
+    })
+    var body=document.body;
+    body.addEventListener("selectsatrt",function (e) {
+        e.preventDefault();
+    })
+    ul.addEventListener("selectstart",function (e) {
+        for(var i=0;i<ul.children.length;i++){
+            ul.children[i].addEventListener("selectstart",function (e) {
+                e.preventDefault();
+            })
+        }
+        e.preventDefault();
+    })
+    document.addEventListener("selectstart",function (e) {
+        e.preventDefault();
+    })
+</script>
+</body>
+</html>

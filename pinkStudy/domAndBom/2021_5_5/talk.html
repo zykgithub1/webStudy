@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+
+            list-style: none;
+        }
+        .box{
+            margin: 100px auto;
+            width: 300px;
+            padding: 30px;
+            border: 1px solid;
+        }
+        .delli{
+            line-height: 30px;
+            width: 200px;
+            height: 30px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+        }
+        .delli a{
+            text-decoration: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <textarea name="" id="" cols="30" rows="10" class="text_con" >123123</textarea>
+    <button>发布</button>
+    <ul>
+        <li>内容：</li>
+    </ul>
+</div>
+<script>
+    var text_con=document.querySelector(".text_con");
+    var btn=document.querySelector("button");
+    var ul=document.querySelector("ul");
+    btn.onclick=function () {
+        if(text_con.value=="123123"||text_con.value==""){
+            alert("请输入内容");
+            return;
+        }else{
+            var li=document.createElement("li");
+            li.className="delli";
+            li.innerHTML=text_con.value+"<a href='javascript:;'>删除</a>a>";
+            ul.insertBefore(li,ul.children[1]);
+
+            var as=ul.querySelectorAll("a");
+            for(var i=0;i<as.length;i++){
+                as[i].onclick=function () {
+                    ul.removeChild(this.parentNode);
+                }
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
