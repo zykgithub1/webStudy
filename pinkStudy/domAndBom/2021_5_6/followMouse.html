@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            position: relative;
+            height: 3000px;
+        }
+        div{
+            position: absolute;
+            width: 79px;
+            height: 68px;
+            background: url("images/angel.gif")no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div class="angle"></div>
+<script>
+    var angle=document.querySelector(".angle");
+    document.addEventListener("mousemove",function (e) {
+        var x=e.pageX;
+        var y=e.pageY;
+        angle.style.left=x-30+"px";
+        angle.style.top=y-30+"px";
+    })
+</script>
+
+</body>
+</html>

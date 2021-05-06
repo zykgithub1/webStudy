@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+</head>
+<body>
+<!--          语法规范    window.setTimeout(func,delay time);-->
+<!--/*延迟时间可以省略，默认是0   单位毫秒*/-->
+<!--可以直接写函数，也可以写函数名   -->
+<!--页面中有很多定时器，给每个定时器起名字-->
+<script>
+    // setTimeout(function () {
+    //     alert("times out");
+    // },2000);
+    var time1=setTimeout(test,1000);
+    var time2=setTimeout(test,3000);
+    function test() {
+        for(var i=0;i<10;i++){
+            console.log(i);
+        }
+    }
+</script>
+</body>
+</html>

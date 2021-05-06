@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            margin: 100px auto;
+            width: 130px;
+            height: 40px;
+        }
+        ul li{
+            display: inline-block;
+            color: white;
+            width: 40px;
+            line-height: 40px;
+            height: 40px;
+            text-align: center;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>1</li>
+    <li>1</li>
+</ul>
+<script>
+    var lis=document.querySelectorAll("li");
+    console.log(lis);
+    var inputTime=new Date("2021-5-6 14:30:00");
+    var timer=setInterval(count,1000);
+    function count() {
+        var nowTime=new Date();
+        var times=parseInt((inputTime-nowTime)/1000);
+        var h=parseInt(times/60/60%24);
+        lis[0].innerHTML=h;
+        h=h<10?"0"+h:h;
+        var minites=parseInt(times/60%60);
+        minites=minites<10?"0"+minites:minites;
+        lis[1].innerHTML=minites;
+        var seconds=parseInt(times%60);
+        seconds=seconds<10?"0"+seconds:seconds;
+        lis[2].innerHTML=seconds;
+    }
+    count();
+</script>
+</body>
+</html>

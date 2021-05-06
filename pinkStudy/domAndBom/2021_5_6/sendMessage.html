@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 500px;
+            height: 300px;
+            background-color: skyblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text">
+    <button>发送</button>
+</div>
+<script>
+    var input=document.querySelector("input");
+    var btn=document.querySelector("button");
+
+    btn.onclick=function () {
+        btn.disabled=true;
+        var daojishi=5;
+        btn.innerHTML="剩余"+daojishi+"秒可以发送信息";
+        var set=setInterval(count,1000);
+        function count() {
+            daojishi--;
+            btn.innerHTML="剩余"+daojishi+"秒可以发送信息";
+            if(daojishi==0){
+                clearInterval(set);
+                btn.disabled=false;
+                btn.innerHTML="发送";
+            }
+
+        }
+    }
+
+    
+    
+</script>
+</body>
+</html>

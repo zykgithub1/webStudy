@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            /*border: 1px solid;*/
+            width: 250px;
+            margin: 40px auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="search">
+    <button>搜索</button>
+</div>
+<script>
+    var kuang=document.querySelector("input");
+    document.addEventListener("keyup",function (e) {
+        if(e.key=='s'||e.key=='S'){
+            kuang.focus();
+        }
+    })
+</script>
+
+</body>
+</html>

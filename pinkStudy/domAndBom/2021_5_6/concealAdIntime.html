@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            font-size: 60px;
+            line-height:70px;
+            background-color: skyblue;
+            text-align: center;
+        }
+        div .close{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: black;
+            top: 0;
+            right: -30px;
+        }
+    </style>
+</head>
+<body>
+<div>我是一个广告
+<div class="close"></div>
+</div>
+<script>
+    var ad=document.querySelector("div");
+    var close=document.querySelector(".close");
+    console.log(close);
+    close.addEventListener("click",function () {
+        this.parentNode.style.display="none";
+    });
+    var time1=setTimeout(f,5000);
+    function f() {
+        ad.style.display="none";
+    }
+</script>
+</body>
+</html>

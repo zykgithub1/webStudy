@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            position: relative;
+            width: 500px;
+            height: 400px;
+            border: 1px solid;
+            margin: 40px auto;
+        }
+        .search{
+            position: absolute;
+            top: 100px;
+            left: 40px;
+        }
+        .biger{
+            display: none;
+            border-radius: 18px;
+            line-height: 70px;
+            /*display: none;*/
+            top: 10px;
+            position: absolute;
+            height: 70px;
+            width: 300px;
+            font-size: 40px;
+            background-color: skyblue;
+        }
+        .biger::before{
+            content: "";
+            /*display: block;*/
+            position: absolute;
+            left: 100px;
+            border-top: 20px solid skyblue;
+            border-left: 20px dashed transparent;
+            border-right:20px dotted transparent ;
+            border-bottom: 20px dotted transparent;
+            bottom: -40px;
+        }
+        /*.biger::before{*/
+        /*    !*display: none;*!*/
+        /*    content: "";*/
+        /*    width: 0;*/
+        /*    height: 0;*/
+        /*    position: absolute;*/
+        /*    top: 29px;*/
+        /*    left: 28px;*/
+        /*    border: 8px solid #000;*/
+        /*    border-style: solid dashed dashed;*/
+        /*    border-color: #fff transparent transparent;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="biger">
+        123
+        <div class="triangle"></div>
+    </div>
+    <div class="search">
+        搜索
+        <input type="search">
+        <button>搜索</button>
+    </div>
+    <script>
+        var search=document.querySelector("input");
+        var biger=document.querySelector(".biger");
+        // var sanjiao=document.querySelector(".triangle");
+        document.addEventListener("keyup",function () {
+            search.focus();
+        })
+
+        search.addEventListener("keyup",function () {
+            if(search.value==""){
+                biger.style.display="none";
+            }else{
+                biger.style.display="block";
+                biger.innerHTML=this.value;
+            }
+        })
+        search.addEventListener("focus",function () {
+            if(this.value!=""){
+                biger.innerHTML=this.value;
+                biger.style.display="block";
+            }
+        })
+        search.addEventListener("blur",function () {
+            biger.style.display="none";
+        })
+    </script>
+
+</div>
+
+</body>
+</html>
