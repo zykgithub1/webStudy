@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src:  url('fonts/icomoon.eot?2e5zjp');
+            src:  url('fonts/icomoon.eot?2e5zjp#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?2e5zjp') format('truetype'),
+            url('fonts/icomoon.woff?2e5zjp') format('woff'),
+            url('fonts/icomoon.svg?2e5zjp#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .outer{
+            width: 601px;
+            height: 432px;
+            /*background-color: skyblue;*/
+            margin: 50px auto;
+        }
+        .top{
+            background-color: #EDEEF0;
+            height: 52px;
+            /*background-color: pink;*/
+        }
+        li{
+            list-style: none;
+        }
+        .top li{
+            width: 66px;
+            /*background-color: #65ff4a;*/
+            height: 52px;
+            text-align: center;
+            line-height: 52px;
+            float: left;
+        }
+
+        .top #lastli::after{
+            font-family: icomoon;
+            content: "\e905";
+            margin-left: 3px;
+            font-size: 14px;
+        }
+        .top ul li:hover{
+            background-color: red;
+            transition: background-color 1s;
+        }
+        .top ul li:nth-child(2):hover .content2{
+            display: block;
+
+        }
+        .content{
+            background-color: #e4e4e4;
+        }
+        .content>ul>li{
+            width: 600px;
+            height: 127px;
+            /*border: 1px solid;*/
+            padding: 15px 10px 10px 2px;
+        }
+        .con_img{
+            float: left;
+            width: 140px;
+            height:96px;
+            /*border: 2px solid red;*/
+        }
+        .con_img img{
+            width: 100%;
+            height: 100%;
+        }
+        .con_text{
+            float: left;
+            width: 420px;
+            height: 95px;
+            /*background-color: pink;*/
+            margin-left: 20px;
+        }
+        .con_text p{
+            font-size: 20px;
+            font-family: Arial;
+        }
+        .context-inner{
+            width: 400px;
+            height: 40px;
+            line-height: 40px;
+            /*background-color: #888888;*/
+        }
+        .context-inner ul li{
+            float: left;
+            padding: 0 5px;
+            line-height: 30px;
+            font-size: 13px;
+            height: 30px;
+        }
+        .context-inner ul li:first-child{
+            color: red;
+            border: 1px solid red;
+        }
+        .context-inner ul li:last-child{
+            /*border-left: 1px solid gray;*/
+            color: gray;
+        }
+        .inner_symbol::after{
+            font-family: icomoon;
+            margin-left: 60px;
+            content: "\e901   \e906";
+        }
+        .content{
+            display: none;
+        }
+        .current{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="top">
+        <ul class="firstul">
+            <li>要闻</li>
+            <li>重庆</li>
+            <li>国内</li>
+            <li>国际</li>
+            <li>独家</li>
+            <li>军事</li>
+            <li>财经</li>
+            <li>科技</li>
+            <li id="lastli">更多</li>
+        </ul>
+    </div>
+    <div class="bigcontent">
+        <div class="content " style="display: block">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/p21.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p23.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>HTML DOM addEventListener() 方法</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p23.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>元素添加点击事件。 当用户点击按钮时，</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/p23.png" alt=""></div>
+                    <div class="con_text">
+                        <p>元素添加点击事件。 当用户点击按钮时，缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>addEventListener() 方法用于向指定元素添加事</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>	必须。字符串，指定事件名。</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/p21.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关所有 HTML DOM 事件，可以查看我们完整的 HTML</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p22.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关可选。布尔值，指定事件是否在捕获或冒泡阶段执行。</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p23.png" alt=""></div>
+                    <div class="con_text">
+                        <p>可选。布尔值，指定事件是否在捕获或冒泡阶段执行。</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>	在 Firefox 6 和 Opera 11.60 中 useCapture 参数是可选的。 </p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>您可以在文档中添加许多事件，添加的事件不会覆盖已存在的事件。</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默您可以在文档中添加许多事件，添加的事件不会覆盖已存在的事件。无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>您可以在同一个元素中添加不同类型的事件。中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时您可以在同一个元素中添加不同类型的事件。国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中您可以在同一个元素中添加不同类型的事件。</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <div class="con_img"><img src="images/xilali.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p2.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="con_img"><img src="images/p13.png" alt=""></div>
+                    <div class="con_text">
+                        <p>关键时刻默克尔再挺中国：缺少中国 我们将无法解决</p>
+                        <div  class="context-inner">
+                            <ul>
+                                <li>新闻</li>
+                                <li>默克尔</li>
+                                <li>欧盟</li>
+                                <li>欧洲议会</li>
+                                <li>|</li>
+                                <li class="inner_symbol">52分钟前</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    var lis=document.querySelector(".firstul").querySelectorAll("li");
+    var contenlist=document.querySelectorAll(".content");
+    console.log(contenlist)
+    for(var i=0;i<lis.length;i++){
+        lis[i].setAttribute("index",i);
+        lis[i].addEventListener("mouseover",function () {
+            var index=this.getAttribute("index");
+            for(var j=0;j<contenlist.length;j++){
+                contenlist[j].style.display="none";
+            }
+            contenlist[index].style.display="block";
+        })
+    }
+</script>
+</body>
+</html>

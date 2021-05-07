@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/detail.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            position: relative;
+        }
+        .outer{
+            position: relative;
+            left: 100px;
+            top: 100px;
+            width: 320px;
+            height: 320px;
+            border: 1px solid red;
+            /*text-align: center;*/
+        }
+        .outer>img{
+            position: relative;
+            /*display: block;*/
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        .mask{
+            /*display: none;*/
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            position: absolute;
+            top: 0;
+            left: 0px;
+            opacity: .4;
+            cursor: move;
+        }
+        .big{
+            /*display: none;*/
+            position: absolute;
+            left: 700px;
+            top: 0;
+            width: 500px;
+            height: 600px;
+            border: 2px solid #ccc;
+            overflow: hidden;
+
+            /*opacity: .5;*/
+        }
+        .bigImg{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <img src="images/b3.png" alt="">
+    <div class="mask"></div>
+    <div class="big">
+        <img src="images/big.jpg" alt="" class="bigImg">
+    </div>
+</div>
+</body>
+</html>
