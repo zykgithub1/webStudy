@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    //动画原理：
+    //1,获取盒子当前位置：
+    //2，让盒子在当前位置加1个移动距离
+    //3，利用定时器不断重复这个操作
+    //4，加一个结束定时器的条件
+    //5，此元素需要添加定位，才能使用element.style.left
+    function animate(obj,target) {
+        clearInterval(obj.timer1);
+       obj.timer1=setInterval(function move() {
+            obj.style.left=obj.offsetLeft+50+"px";
+            if(obj.offsetLeft>=target){
+                clearInterval(obj.timer1);
+            }
+        },100);
+    }
+    var div=document.querySelector("div");
+    var curX=div.offsetLeft;
+    animate(div,590);
+
+</script>
+</body>
+</html>

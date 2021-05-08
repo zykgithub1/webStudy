@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSSSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .w{
+            margin: 50px auto;
+            width: 1200px;
+        }
+        .header{
+            height: 150px;
+            background-color: pink;
+        }
+        .banner{
+            height: 150px;
+            background-color: purple;
+        }
+        .main{
+            height: 1000px;
+            background-color: blue;
+        }
+        .silider-bar{
+            padding-top: 50px;
+            background-color: #65ff4a;
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            right:220px;
+            top: 440px;
+        }
+        .silider-bar span{
+            position: absolute;
+            bottom: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="silider-bar">
+    <span class="goback"><a href="#head">回到底部</a></span>
+</div>
+<div class="header w" id="head">头部区域</div>
+<div class="banner w">banner区域</div>
+<div class="main w">主体部分</div>
+<script>
+    var siliderbar=document.querySelector(".silider-bar");
+    var banner=document.querySelector(".banner");
+    var main=document.querySelector(".main");
+    var goback=document.querySelector(".goback");
+    var mainTop=main.offsetTop;
+    var bannerTop=banner.offsetTop;
+    var siliderbarTop=siliderbar.offsetTop-bannerTop;
+    document.addEventListener("scroll",function () {
+        console.log(window.pageYOffset);
+        if(window.pageYOffset>=bannerTop){
+            siliderbar.style.position="fixed";
+            siliderbar.style.top=siliderbarTop+"px";
+        }else{
+            siliderbar.style.position="absolute";
+            siliderbar.style.top="440px";
+        }
+        if(window.pageYOffset>=mainTop){
+            goback.style.display="block";
+        }else{
+            goback.style.display="none";
+        }
+
+    })
+</script>
+</body>
+</html>
