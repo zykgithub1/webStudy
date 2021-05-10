@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<ul>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+</ul>
+<ol>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+    <li>多个里面筛选几个</li>
+</ol>
+<script>
+    $(function(){
+        $("ul li:first").css("backgroundColor","yellow");
+        $("ul li:eq(2)").css("color","blue");
+        $("ol li:odd").css("color","blue");
+        $("ol li:even").css("backgroundColor","blue");
+    })
+</script>
+</body>
+</html>
