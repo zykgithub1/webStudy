@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../bootstrap/js/jquery-3.6.0.min.js"></script>
+    <style>
+        ul{
+            list-style: none;
+        }
+        ul li{
+            border-bottom: dotted 1px ;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            display: none;
+        }
+        ul a{
+            float: right;
+        }
+        .box{
+            width: 300px;
+            margin: 100px auto;
+            border: 1px solid;
+        }
+        span{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box" id="weibo">
+    <span>发布微博</span>
+
+    <textarea name="" id="" cols="30" rows="10" class="txt"></textarea>
+    <button class="btn">发布</button>
+    <ul></ul>
+</div>
+<script>
+    $(".btn").on("click",function () {
+        var cont=$(".txt").val();
+        var delet=$("<a>删除</a>").prop("href","javascript:;");
+        var li=$("<li></li>").html(cont).append(delet);
+        $("ul").prepend(li);
+        li.slideDown();
+        $(".txt").val("");
+    })
+    $("ul").on("click","a",function () {
+        // $(this).parent().slideUp(function () {
+        //     $(this).remove();
+        // });
+        $(this).parent().slideUp(function () {
+            $(this).remove();
+        });
+    })
+</script>
+</body>
+</html>
