@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .outer{
+            background-color: red;
+            position: relative;
+            /*background-color: pink;*/
+            width: 300px;
+            height: 100px;
+            margin: 100px auto;
+        }
+        .firstTriangle{
+             position: absolute;
+             width: 0;
+             height: 0;
+             left: -100px;
+             top: 0;
+             border: 50px solid transparent;
+             border-right-color: red;
+             border-bottom-color: red;
+         }
+        .SecondTriangle{
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: -100px;
+            top: 0;
+            border: 50px solid transparent;
+            border-top-color: red;
+            border-left-color: red;
+        }
+        .time{
+            margin-left: 30px;
+            /*position: absolute;*/
+            height: 100px;
+            width: 100px;
+            background-color:red;
+            float: left;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            color: white;
+        }
+        .wenzi{
+            color: white;
+            padding-top: 20px;
+            display: block;
+            height: 80px;
+            width: 100px;
+            line-height: 10px;
+            background-color: red;
+            /*position: absolute;*/
+            float: left;
+        }
+        .daojishi{
+            color: white;
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="firstTriangle"></div>
+    <div class="time">08:00</div>
+    <div class="wenzi">正在秒杀 <p>距结束</p></div>
+    <div class="daojishi">000000</div>
+
+    <div class="SecondTriangle"></div>
+</div>
+<script>
+    var daojishi=document.querySelector(".daojishi");
+    var time="2021-6-13 12:00:00";
+    var setTime=new Date(time);
+    var nowTime=new Date();
+    var times=(setTime-nowTime)/1000;
+    // var txt=countTime(times);
+    // countTime(times);
+    var txt=countTime(times);
+    daojishi.innerHTML=txt;
+    var timer=setInterval(function () {
+        var nowTime=new Date();
+        var times=(setTime-nowTime)/1000;
+        var txt=countTime(times);
+        daojishi.innerHTML=txt;
+    },1000);
+
+    // console.log(times);
+    function countTime(times) {
+        var hour=parseInt(times/60/60%24);
+        hour=hour<10&&hour>0?"0"+hour:hour;
+        var minites=parseInt(times/60%60);
+        minites=minites<10&&minites>0?"0"+minites:minites;
+        var senconds=parseInt(times%60);
+        senconds=senconds<10&&senconds>0?"0"+senconds:senconds;
+        return hour+":"+minites+":"+senconds;
+    }
+    // countTime(times);
+</script>
+</body>
+</html>

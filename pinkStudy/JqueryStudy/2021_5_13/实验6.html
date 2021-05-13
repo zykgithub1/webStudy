@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .w{
+            width: 900px;
+            margin: 0 auto;
+        }
+        a{
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+        .outer{
+            height: 50px;
+            margin: 100px auto;
+            background-color: #771357;
+        }
+        .box{
+            width: 900px;
+            height: 50px;
+            /*line-height: 50px;*/
+        }
+        .box>li{
+            background-color: #771357;
+            width: 150px;
+            /*height: 100%;*/
+            position: relative;
+            float: left;
+        }
+        .box a{
+            /*position: relative;*/
+            display: block;
+            /*padding: 0 30px;*/
+            /*float: left;*/
+            height: 50px;
+            line-height: 50px;
+        }
+        /*.box a:hover{*/
+        /*    background-color: rgba(0,0,0,.3);*/
+        /*}*/
+        ul{
+            list-style: none;
+        }
+        .box li >ul{
+            position: absolute;
+        }
+        .innerUl{
+            /*border: 1px red solid;*/
+            position: absolute;
+            /*height: 30px;*/
+            line-height: 30px;
+            width: 150px;
+            display: none;
+            text-align: center;
+            background-color: rgba(0,0,0,.3);
+        }
+        .innerUl li{
+            color: white;
+        }
+        .innerUl li:hover{
+            transition: background-color 1s;
+            background-color: #771357;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <ul class="box w">
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">学校概况</a>
+            <ul class="innerUl">
+                <li>学校简介</li>
+                <li>学校简介</li>
+                <li>学校简介</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    var box=document.querySelector(".box");
+    var lis=box.children;
+    for(var i=0;i<lis.length;i++){
+        lis[i].addEventListener("mouseenter",function () {
+            this.style.backgroundColor="rgba(0,0,0,.3)";
+            this.children[1].style.display="block";
+        })
+        lis[i].addEventListener("mouseleave",function(){
+            this.style.backgroundColor="";
+            this.children[1].style.display="none";
+        })
+
+    }
+</script>
+</body>
+</html>
