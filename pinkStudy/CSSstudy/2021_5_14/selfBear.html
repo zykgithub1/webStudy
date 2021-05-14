@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color:rgba(0,0,0,.2);
+        }
+        div[class^="mountain"]{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 3384px;
+            /*background-color: pink;*/
+        }
+        .mountain-1{
+            position: absolute;
+            z-index: 3;
+            background: url("images/bg1.png")repeat-x;
+            height: 336px;
+            animation: mountain2 10s infinite linear;
+        }
+        .mountain-2{
+            position: absolute;
+            z-index: 2;
+            background: url("images/bg2.png")repeat-x;
+            height: 569px;
+            animation: mountain2 20s infinite linear;
+        }
+        .bear{
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+            z-index: 4;
+            width: 200px;
+            height: 100px;
+            /*background-color: pink;*/
+            background: url("images/bear.png")no-repeat;
+            animation: bearMove 1s infinite steps(8),bearMove2 4s forwards;
+        }
+        @keyframes bearMove {
+            100%{
+                background-position: -1600px 0;
+            }
+        }
+        @keyframes bearMove2 {
+            100%{
+                left:40%;
+                transform: translateX(-50%);
+            }
+        }
+        @keyframes mountain1 {
+            100%{
+                background-position: -3840px 0;
+            }
+        }
+        @keyframes mountain2 {
+            0%{
+                background-position: 0 0 ;
+            }
+            100%{
+                background-position: -3840px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="mountains">
+    <div class="mountain-1"></div>
+    <div class="mountain-2"></div>
+    <div class="bear"></div>
+</div>
+</body>
+</html>

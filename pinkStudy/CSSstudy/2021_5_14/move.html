@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes move {
+            0%{
+                transform:translate(0px) rotate(0);
+            }
+            25%{
+                transform:translate(1000px,300px) rotate(340deg);
+                background-color:pink;
+            }
+            50%{
+                transform:translate(0px) rotate(0);
+                background-color: blue;
+            }
+            75%{
+                transform:translate(1000px,300px) rotate(340deg);
+                background-color: pink;
+            }
+            100%{
+                transform:translate(0px) rotate(0);
+                background-color: blue;
+            }
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+
+</head>
+<body>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #c0c0c0;
+        }
+        div:after{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-bottom:1px solid blue;
+            border-right: 1px solid black;
+            transform: rotate(45deg);
+            right: 20px;
+            bottom: 14px;
+            transition: all .2s;
+        }
+        div:hover::after{
+            right: 20px;
+            bottom: 5px;
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+</html>
