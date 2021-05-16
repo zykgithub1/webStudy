@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="page-header">Jquery发送Ajax请求</h2>
+    <button class="btn btn-primary">GET</button>
+    <button class="btn btn-danger">POST</button>
+    <button class="btn btn-info">通用型方法</button>
+</div>
+<script>
+    $("button").eq(0).click(function () {
+        // alert(11);
+        $.get("http://localhost:8975/Jquery-server",{a:100,b:200},function (data) {
+            console.log(data.age);
+        },"json");
+    })
+    $("button").eq(1).click(function () {
+        // alert(11);
+        $.post("http://localhost:8975/Jquery-server",{a:100,b:200},function (data) {
+            console.log(data.name);
+        },"json");
+    })
+    $("button").eq(2).click(function () {
+        $.ajax({
+            url:"http://localhost:8975/Jquery-server",
+            //参数
+            data:{a:100,b:200},
+            type:"GET",
+            dataType:'json',
+            success:function (data) {
+                console.log(data);
+            },
+            timeout:2000,
+            error:function () {
+                console.log("出错了!!");
+            },
+            headers:{
+                d:300,
+                c:400
+            }
+        })
+    })
+</script>
+</body>
+</html>

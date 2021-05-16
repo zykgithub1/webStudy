@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+用户名: <input type="text" id="username">
+<p></p>
+<script>
+    const input=document.querySelector("input");
+    const p=document.querySelector("p");
+    function handle(data){
+        input.style.border="solid 1px red";
+        p.innerHTML=data.msg;
+    };
+
+
+    input.addEventListener("blur",function () {
+        let username=this.value;
+        //向服务端发送请求
+        const script=document.createElement("script");
+        script.src="http://127.0.0.1:8975/check-username";
+        document.body.appendChild(script);
+    })
+</script>
+</body>
+</html>

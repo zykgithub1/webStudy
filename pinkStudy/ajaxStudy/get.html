@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            width: 100px;
+            height: 50px;
+        }
+        #result{
+            width: 200px;
+            height: 100px;
+            border: 1px skyblue solid;
+        }
+    </style>
+</head>
+<body>
+<button>点击发送请求</button>
+<div id="result"></div>
+<script>
+    var btn=document.querySelector("button");
+    var result=document.querySelector("#result");
+    btn.onclick=function () {
+        //创建对象
+        const xhr=new XMLHttpRequest();
+        //初始化，设置请求方法和url
+        xhr.open('GET','http://localhost:8975/server?a=100&b=200&c=300');
+        //发送
+        xhr.send();
+        //事件绑定
+        xhr.onreadystatechange=function () {
+            //判断 readyState==4就是服务端返回了所有的结果
+            if(xhr.readyState==4){
+                //判断状态码 200 404  403 500
+                //响应码2开头都表示成功
+                if(xhr.status>=200&&xhr.status<300){
+                    //处理结果  行 头  空行 体
+                    //1相应行
+                    // console.log(xhr.status);//状态码
+                    // console.log(xhr.statusText);//状态字符串
+                    // console.log(xhr.getAllResponseHeaders());//返回所有响应头
+                    // console.log(xhr.response);//响应体
+                    result.innerHTML=xhr.response;
+                }else{
+
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
