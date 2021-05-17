@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p v-html="name"></p>
+    <p v-text="name"></p>
+    <input type="button" value="v-on指令" v-on:click="doIt">
+    <input type="button" value="v-on简写" @click="doIt">
+    <input type="button" value="v-on双击" @dblclick="doIt">
+    <h2 @click="changeFood">{{food}}</h2>
+    <h2 @click="changeName">{{name}}</h2>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            name:"<a href='#'>黑马黑马</a>",
+            food:"大肘子"
+        },
+        methods:{
+            doIt:function () {
+                alert("做IT");
+            },
+            changeFood:function () {
+                this.food+="搞什么";
+            },
+            changeName:function () {
+                this.name+="增益开";
+            }
+        }
+    })
+</script>
+</html>
