@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="get joke" @click="getJoke" >
+    <p >{{joke}}</p>
+</div>
+<script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#app",
+        data:{
+            joke:"很好笑的笑话"
+        },
+        methods:{
+            getJoke:function () {
+                //axios里的this已经改变 只有先保存  后重新赋值
+                // console.log(this);
+                var that=this;
+                axios.get("https://autumnfish.cn/api/joke").then(function (response) {
+                    that.joke=response.data;
+                    alert(this==that);
+                },function(err){
+                    console.log(err);
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

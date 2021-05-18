@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #input-num{
+            margin: 100px auto;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="input-num">
+    <button @click="sub" v-show="num<10">-</button>
+    <span>{{num}}</span>
+    <button @click="add">+</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var app=new Vue({
+        el:"#input-num",
+        data:{
+          num:1
+        },
+        methods:{
+            add:function () {
+                if(this.num<10){
+                    this.num++;
+                }else{
+                    alert("到顶了");
+                    this.num--;
+                }
+            },
+            sub:function () {
+                if(this.num>0){
+                    this.num--;
+                }else{
+                    alert("到底了");
+                }
+            }
+
+        }
+    })
+
+</script>
+</body>
+</html>
